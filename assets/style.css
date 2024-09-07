@@ -1,0 +1,178 @@
+body {
+    font-family: Arial;
+    background-color: #f7f7f7;
+    max-width: 62.5rem;
+    margin: 0 auto;
+}
+
+#logo {
+    display: flex;
+    justify-content: center;
+    padding: 1rem;
+}
+
+ul {
+    list-style: none;
+    display: flex;
+    gap: 1.3rem;
+    justify-content: center;
+    padding: 1rem 0rem 0rem 0rem;
+    margin: 0rem;
+}
+
+li {
+    background: white;
+    padding: 0.6rem;
+    border: 0.1rem solid transparent;
+}
+
+li:hover {
+    border-color: #ee2211;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+}
+
+article {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: 2.5rem;
+}
+
+#item-details {
+    display: grid;
+    background: white;
+    align-content: center;
+    justify-items: right;
+    text-align: right;
+    position: relative;
+    padding: 2rem;
+}
+
+h1 {
+    margin: 0rem;
+    font-size: 2rem;
+}
+
+.details {
+    font-size: 1.2rem;
+}
+
+.button {
+    background: #ee2211;
+    color: white;
+    border-radius: 0.2rem;
+    padding: 0.6rem;
+    margin: 0rem;
+}
+
+.button:hover {
+    background: #900;
+}
+
+.decoration::after {
+    content: "";
+    display: flex;
+    background: #ee2211;
+    position: absolute;
+    top: 5%;
+    right: -6%;
+    width: 3.7rem;
+    border-radius: 0.6rem;
+    height: 0.3rem;
+}
+
+#img-bicicleta {
+    max-width: 100%;
+    height: auto;
+}
+
+#highlight {
+    font-size: 4rem;
+    padding: 3.1rem;
+    text-align: end;
+    color: #c6c6c6;
+    background-image: url(/assets/imagens/onda.svg);
+}
+
+#item-benefits {
+    background: white;
+    padding: 2rem;
+    display: grid;
+    row-gap: 2rem;
+}
+
+.benefits {
+    border-left: 0.5rem solid transparent;
+    border-radius: 0.5rem;
+    padding-left: 0.5rem;
+    font-size: 1.2rem
+}
+
+.benefits:hover {
+    border-left-color: #ee2211;
+}
+
+.benefits-highlight {
+    display: grid;
+    grid-template-columns: 1fr 8fr;
+    align-items: center;
+}
+
+footer {
+    background: white;
+    padding: 0.6rem;
+    text-align: center;
+}
+
+@media only screen and (max-width: 1000px) {
+    #highlight {
+        grid-column: span 2;
+        text-align: center;
+    }
+
+    #item-benefits {
+        grid-column: span 2;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    article {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    #item-details {
+        justify-items: left;
+        text-align: left;
+    }
+
+    #highlight, #item-benefits {
+        grid-column: 1;
+    }
+
+    #highlight {
+        font-size: 3rem;
+    }
+
+    .decoration::after {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    .benefits, .details {
+        font-size: 1rem
+    }
+
+    #highlight {
+        font-size: 2rem;
+    }
+}
